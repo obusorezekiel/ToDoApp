@@ -88,6 +88,7 @@ class todocontroller extends Controller
         $todo->body = $request->body;
         $todo->title = $request->title;
         $todo->save();
+        session()->flash('message','Successfully Updated');
         return redirect('todo');
     }
 
@@ -99,6 +100,9 @@ class todocontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item = todo::find($id);
+        $item->delete();
+        session()->flash('message','Deleted Successfully');
+        return redirect('/todo');
     }
 }
