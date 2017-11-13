@@ -11,10 +11,13 @@
     {{csrf_field()}}
   <fieldset>
     <div class="form-group">
-      <textarea class="form-control" name="body" id="exampleTextarea" rows="3"></textarea>
+      <input placeholder="Title" class="form-control" name="title" id="exampleTextarea" rows="3"/>
+      <br>
+    </div>
+    <div class="form-group">
+      <textarea placeholder="Body" class="form-control" name="body" id="exampleTextarea" rows="3"></textarea>
       <br>
       <button type="submit" class="btn btn-success">Submit</button>
-
     </div>
   </fieldset>
 </form>
