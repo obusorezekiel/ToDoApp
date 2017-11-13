@@ -67,7 +67,8 @@ class todocontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = todo::find($id);
+        return view('todo.edit',compact('item'));
     }
 
     /**
@@ -79,7 +80,15 @@ class todocontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $todo = todo::find($id);
+        $this->validate($request,[
+            'body'=>'required',
+            'title'=>'required',
+        ]);
+        $todo->body = $request->body;
+        $todo->title = $request->title;
+        $todo->save();
+        return redirect('todo');
     }
 
     /**
