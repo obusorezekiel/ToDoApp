@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About ToDoApp
+## A TODO Web Application built by Umesi Obusor Ezekiel
 
-This Todo application is built fully on Laravel 5.4 and Bootstrap
+
 
 
 ## About Laravel
